@@ -1,7 +1,7 @@
 import React from 'react'
 import { Segment, Item, Header, Button, Image } from 'semantic-ui-react'
 import { IActivity } from '../../../app/models/Activity';
-import { Observer, observer } from 'mobx-react-lite';
+import {  observer } from 'mobx-react-lite';
 
 const activityImageStyle = {
   filter: 'brightness(30%)'
