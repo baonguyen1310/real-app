@@ -7,13 +7,12 @@ interface IProps
     FormFieldProps {}
 const TextInput: React.FC<IProps> = ({
   input,
-  width,
   type,
   placeholder,
   meta: { touched, error }
 }) => {
-  return <Form.Field error={touched && !!error}>
-      <input {...input} placeholder ={placeholder} type={type}/>
+  return <Form.Field error={touched && !!error} type={type}>
+      <input {...input}  placeholder ={placeholder} />
       {touched && error && (
           <Label basic color='red'>
               {error}
