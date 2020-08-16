@@ -46,6 +46,8 @@ namespace Application.Activities
                 if (attendance.IsHost)
                     throw new RestException(HttpStatusCode.BadGateway, new { Attendance = "You cannot remove your self as host" });
 
+                _context.UserActivities.Remove(attendance);
+
                 var success = await _context.SaveChangesAsync() > 0;
 
                 if (success) return Unit.Value;

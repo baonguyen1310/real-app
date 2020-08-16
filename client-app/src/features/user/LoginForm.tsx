@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { Form as FinalForm, Field } from "react-final-form";
 import TextInput from "../../app/common/form/TextInput";
-import { Button, Form, Label, Header } from "semantic-ui-react";
+import { Button, Form, Header } from "semantic-ui-react";
 import { RootStoreContext } from "../../app/stores/rootStore";
 import { IUserFormValues } from "../../app/models/User";
 import { FORM_ERROR } from "final-form";
