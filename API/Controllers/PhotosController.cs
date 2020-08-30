@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers
 {
-    public class PhotoController : BaseController
+    public class PhotosController : BaseController
     {
         [HttpPost]
         public async Task<ActionResult<Photo>> Add([FromForm]Add.Command command)
@@ -20,7 +20,7 @@ namespace API.Controllers
             return await Mediator.Send(new Delete.Command{ Id = id});
         }
 
-        [HttpPost("{id/setmain}")]
+        [HttpPost("{id}/setmain")]
         public async Task<ActionResult<Unit>> SetMain(string id)
         {
             return await Mediator.Send(new SetMain.Command{ Id = id });
