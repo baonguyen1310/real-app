@@ -22,6 +22,7 @@ export const ActivityDetailChat = () => {
       stopHubConnection();
     };
   }, [createHubConnection, stopHubConnection,activity!.id]);
+  
   return (
     <Fragment>
       <Segment
